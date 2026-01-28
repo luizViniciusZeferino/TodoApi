@@ -7,4 +7,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 public interface TarefaRepository extends JpaRepository<TarefaEntity, Long> { // Repositorio gerencia entidade TarefaEntity que tem id tipo Long
+
+
+
+
+
 }
