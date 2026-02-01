@@ -1,4 +1,4 @@
-package entity;
+package com.luiz.todo.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
