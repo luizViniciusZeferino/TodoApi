@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.luiz.todo.repository.TarefaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TarefaService {
@@ -21,5 +22,14 @@ public class TarefaService {
     // buscarTarefas = Método que chama o repository para buscar as tarefas
     public List<TarefaEntity> buscarTarefas() {
         return tarefaRepository.findAll();
+    }
+
+    // optional por conta do retorno findById
+    public Optional<TarefaEntity> buscarTarefaId(Long id){
+        return tarefaRepository.findById(id);
+    }
+
+    public TarefaEntity criarTarefa(TarefaEntity tarefa) {
+        return tarefaRepository.save(tarefa);
     }
 }
