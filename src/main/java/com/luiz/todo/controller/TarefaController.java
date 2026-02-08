@@ -39,4 +39,14 @@ public class TarefaController {
         return ResponseEntity.created(null).body(tarefaEntity);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarTarefa(@PathVariable Long id) {
+       tarefaService.deletarTarefaId(id);
+       return ResponseEntity.noContent().build(); // noContent = status 204 (requisição sucedida sem corpo da resposta)
+    }
+
+
+
+
+
 }

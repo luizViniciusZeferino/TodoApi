@@ -32,4 +32,19 @@ public class TarefaService {
     public TarefaEntity criarTarefa(TarefaEntity tarefa) {
         return tarefaRepository.save(tarefa);
     }
+
+    public void deletarTarefaId(Long id) {
+        tarefaRepository.deleteById(id);
+        Optional<TarefaEntity> tarefa = buscarTarefaId(id);
+        if (tarefa.isEmpty()) {
+            System.out.println("Tarefa apagada!");
+        } else {
+            System.out.println("Tarefa não foi excluída");
+        }
+    }
+
+
+
+
+
 }
