@@ -45,7 +45,11 @@ public class TarefaController {
        return ResponseEntity.noContent().build(); // noContent = status 204 (requisição sucedida sem corpo da resposta)
     }
 
-
+    @PutMapping("/atualiza/tarefa")
+    public ResponseEntity<TarefaEntity> atualizarTarefa (@RequestBody TarefaEntity tarefa) {
+        TarefaEntity tarefaEntity = tarefaService.atulizarTarefa(tarefa);
+        return ResponseEntity.ok(tarefaService.atulizarTarefa(tarefa));
+    }
 
 
 

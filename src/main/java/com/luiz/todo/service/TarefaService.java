@@ -43,6 +43,9 @@ public class TarefaService {
         }
     }
 
+    public TarefaEntity atulizarTarefa(TarefaEntity tarefa) {
+        return tarefaRepository.save(tarefa);
+    }
 
 
 
